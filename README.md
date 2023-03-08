@@ -1,5 +1,4 @@
 # Password-Generator
-Password generator
 
 Default password length is 16
 
