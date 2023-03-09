@@ -2,4 +2,4 @@
 
 Default password length is 16
 
-Just change password_length variable to adjust
+Just change password_length in config.ini to adjust
