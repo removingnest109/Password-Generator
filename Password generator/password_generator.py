@@ -1,6 +1,7 @@
 import random
 import os
 import string
+import configparser
 
 config_file = 'config.ini'
 if not os.path.isfile(config_file):
@@ -12,7 +13,7 @@ if not os.path.isfile(config_file):
 
 config = configparser.ConfigParser()
 config.read(config_file)
-password_manager_key = config.get('keys', 'password_length')
+password_length = int(config.get('keys', 'password_length'))
 
 per_type = int(password_length / 4)
 leftover = password_length - per_type * 3
