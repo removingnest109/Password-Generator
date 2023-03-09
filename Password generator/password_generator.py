@@ -2,7 +2,17 @@ import random
 import os
 import string
 
-password_length = 16
+config_file = 'config.ini'
+if not os.path.isfile(config_file):
+    # generate config file
+    config = configparser.ConfigParser()
+    config['keys'] = {'password_length': 16}
+    with open(config_file, 'w') as f:
+        config.write(f)
+
+config = configparser.ConfigParser()
+config.read(config_file)
+password_manager_key = config.get('keys', 'password_length')
 
 per_type = int(password_length / 4)
 leftover = password_length - per_type * 3
