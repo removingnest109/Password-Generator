@@ -1,5 +1,7 @@
-# Password-Generator
+# Usage
+the password generator accepts a command line argument for the password length to be generated
 
-Default password length is 16
-
-Just change password_length to adjust
+```bash
+# Eg. for length of 16 characters
+python ./portscanner.py 16
+```
