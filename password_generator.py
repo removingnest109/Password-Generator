@@ -11,7 +11,7 @@ def generate_password(password_length):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script.py <password_length>")
+        print("Usage: python password_generator.py <password_length>")
         sys.exit(1)
 
     try:
